@@ -1,0 +1,265 @@
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+/* VARIABLES */
+:root {
+  --fons-principal: rgb(244, 244, 244);
+  --contrast: rgb(126, 1, 143);
+  --contrast-fosc: rgb(62, 0, 65);
+  --text: rgb(0, 0, 0);
+  --text-clar: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fons-principal);
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  color: var(--contrast);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* ESTILS HEADER */
+
+header {
+  padding: 20px;
+  box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+nav a:hover {
+  color: var(--contrast);
+}
+
+a.selected {
+  color: var(--contrast);
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.logo {
+  font-size: 3.125rem;
+  /*50px*/
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Estils del header amb pantalles grans */
+@media screen and (min-width: 700px) {
+  header {
+    text-align: left;
+    padding: 20px 20%;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    padding-right: 20px;
+  }
+}
+
+/* ESTILS FOOTER */
+
+footer {
+  background-color: var(--contrast-fosc);
+  color: var(--text-clar);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.nav-footer a {
+  color: var(--text-clar);
+  text-decoration: none;
+  font-size: 1.125rem;
+  /*18px;*/
+}
+
+.nav-footer a:hover {
+  color: var(--contrast);
+}
+
+.nav-footer,
+.nav-social {
+  list-style-type: none;
+}
+
+.nav-social {
+  display: flex;
+  gap: 10;
+  justify-content: center;
+}
+
+.fa-brands {
+  color: var(--text-clar);
+}
+
+.nav-social a:hover {
+  opacity: 0.7;
+}
+
+address {
+  font-style: cursive;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+/* Estils del footer amb pantalla gran */
+@media screen and (min-width: 700px) {
+  .nav-footer {
+    display: flex;
+    padding: 0;
+  }
+
+  .nav-social {
+    display: flex;
+    justify-content: left;
+    padding: 0;
+  }
+
+  .nav-footer li {
+    padding-right: 20px;
+  }
+
+  address {
+    text-align: left;
+  }
+
+  footer {
+    padding: 20px 20%;
+  }
+}
+
+/* INDEX.HTML */
+.biografia-index,
+.llibres-index {
+  margin-bottom: 40px;
+  padding: 10px 30px;
+
+
+}
+
+.perfil {
+  width: 50vw;
+  border-radius: 50;
+  margin-top: 30px;
+
+}
+
+
+.llibres-index-detall {
+  margin: 0;
+  padding: 0;
+  width: 20vh;
+  height: 35vh;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  background-image: url("img/messier.jpeg");
+  background-position: center;
+}
+
+.llibres-index-flex {
+  display: flex;
+  gap: 30;
+}
+
+.quota-index {
+  margin: 0;
+  padding: 30px;
+  background-image: url("img/messier2.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 2rem;
+}
+
+
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--contrast);
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8;
+  text-decoration: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--text);
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+
+
+}
+
+
+
+/* Estils Detall La Fundacio */
+.main-fundacio {
+  padding: 0;
+}
+
+.portada {
+  margin: 0;
+  background-image: url("img/messier.jpeg");
+  height: 300px;
+  background-size: cover;
+  background-color: #cccccc;
+  color: var(--text-clar);
+}
+
+.portada p {
+  margin: 0;
+  text-align: center;
+  font-size: calc(2.187rem + 1vw);
+  /* 35px */
+  padding: 75px 10px 0 20px;
+}
